@@ -14,3 +14,6 @@ jobs:
         run: npm install
       - name: Build Project
         run: npm run build --prefix client
+        env:
+        CI: true
+        shell: bash -eux
