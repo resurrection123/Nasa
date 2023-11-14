@@ -22,8 +22,6 @@ jobs:
             node-version: ${{matrix.node-version}}
       - name: Install Dependencies
         run: npm install
-      - name: Install plugin
-        run: npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps
       - name: BUILD
         run: npm run build --prefix client
       - run: npm test
