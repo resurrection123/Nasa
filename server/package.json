@@ -18,10 +18,10 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.0.1",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "@babel/preset-env": "^7.23.3"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.23.3",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "csv-parser": "^3.0.0",
