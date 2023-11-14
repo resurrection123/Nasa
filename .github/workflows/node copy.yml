@@ -7,8 +7,11 @@ on:
 
 jobs:
   build:
+    # possiamo specificare l'ambiente in cui verranno eseguiti i job
     env:
+      # con questa variabile disattiviamo la modalita watch
       CI: true
+    # possiamo eseguire i nostri test l'intero build job in diversi ambienti impostando "strategy"
     strategy:
       matrix:
       node-version: [14.x, 16.x]
@@ -26,4 +29,5 @@ jobs:
         run: npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps
       - name: BUILD
         run: npm run build --prefix client
+        # questo avvierà i test per il front-end in watch mode, ci sono dei modi con cui possiamo disattivare questa modalità con env
       - run: npm test
