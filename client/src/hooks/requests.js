@@ -1,4 +1,3 @@
-const serverRoot = "v1";
 const host = "http://localhost:8000";
 async function httpGetPlanets() {
   // Load planets and return as JSON.
