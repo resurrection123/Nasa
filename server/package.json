@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "nodemon src/server.js",
-    "test": "set NODE_OPTIONS=--experimental-vm-modules &&  jest --detectOpenHandles",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
     "test-watch": "set NODE_OPTIONS=--experimental-vm-modules &&  jest --watchAll",
     "cluster": "pm2 start src/server.js -i -1 --watch"
   },
