@@ -1,10 +1,12 @@
 import request from "supertest";
 import app from "../src/app.js";
 import { mongoConnect } from "../src/utils/mongo.js";
+import { loadPlanetsData } from "../src/models/planets.model.js";
 
 describe("Launches Api", () => {
   beforeAll(async () => {
     await mongoConnect();
+    await loadPlanetsData();
   });
 
   //possiamo definire dei gruppi di test
